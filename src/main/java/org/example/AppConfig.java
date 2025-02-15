@@ -7,21 +7,21 @@ import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class AppConfig {
-    @Bean
+    @Bean // Define a bean for the Qualcomm Snapdragon 888 processor
     Processor snapdragon888() {
         var processor = new Processor();
         processor.setName("Qualcomm Snapdragon 888");
         return processor;
     }
 
-    @Bean
+    @Bean  // Define a bean for the Qualcomm Snapdragon 8 Gen 2 processor
     Processor snapdragon8Gen2() {
         var processor = new Processor();
         processor.setName("Qualcomm Snapdragon 8 Gen 2");
         return processor;
     }
 
-    @Bean
+    @Bean     // Define a primary bean for the Apple A16 Bionic processor
     @Primary
     Processor appleA16() {
         var processor = new Processor();
