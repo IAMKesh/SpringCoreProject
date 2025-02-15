@@ -38,14 +38,6 @@ public class AppConfig {
     }
 
     @Bean
-    Smartphone vivo() {
-        var smartphone = new Smartphone();
-        smartphone.setName("Google Pixel 7 Pro");
-        smartphone.setProcessor(snapdragon8Gen2());
-        return smartphone;
-    }
-
-    @Bean
     Smartphone iphone(@Autowired Processor processor) {
         var smartphone = new Smartphone();
         smartphone.setName("iPhone 14 Pro");
