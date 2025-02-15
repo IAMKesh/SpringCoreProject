@@ -7,9 +7,11 @@ public class Main {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
         Smartphone samsung = context.getBean("samsung", Smartphone.class);
+        Smartphone huawei = context.getBean("huawei", Smartphone.class);
         Smartphone iphone = context.getBean("iphone", Smartphone.class);
 
         System.out.println("Smartphone name: " + samsung.getName() + ". Processor: " + samsung.getProcessor().getName());
+        System.out.println("Smartphone name: " + huawei.getName() + ". Processor: " + huawei.getProcessor().getName());
         System.out.println("Smartphone name: " + iphone.getName() + ". Processor: " + iphone.getProcessor().getName());
     }
 }

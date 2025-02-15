@@ -38,6 +38,14 @@ public class AppConfig {
     }
 
     @Bean
+    Smartphone huawei() {
+        var smartphone = new Smartphone();
+        smartphone.setName("Huawei Nova Y70");
+        smartphone.setProcessor(snapdragon888());
+        return smartphone;
+    }
+
+    @Bean
     Smartphone iphone(@Autowired Processor processor) {
         var smartphone = new Smartphone();
         smartphone.setName("iPhone 14 Pro");
